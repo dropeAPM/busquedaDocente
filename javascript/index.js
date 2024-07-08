@@ -19,3 +19,9 @@ function buscarDocente() {
         }
     }
 }
+
+
+
+function irLogin(){
+    window.location.href = "html/login.html";
+}
