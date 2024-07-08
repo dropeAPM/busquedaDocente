@@ -1,0 +1,16 @@
+*{
+    color: #fff;
+}
+body{
+    background:#1d2630;
+}
+
+#actualizar{
+    display: none;
+}
+
+a{color: white;}
+a:link{color: white;}
+a:visited{color: white;}
+a:active{color: white;}
+a:focus{color: white;}
