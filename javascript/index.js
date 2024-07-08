@@ -11,11 +11,9 @@ function buscarDocente() {
                    docente.nombre.toLowerCase().includes(busqueda);
         });
 
-        if (resultado.length === 1) {
-            localStorage.setItem("docenteEncontrado", JSON.stringify(resultado[0]));
-            window.location.href = "detalle_docente.html";
-        } else if (resultado.length > 1) {
-            alert("Se encontraron múltiples coincidencias. Por favor, sea más específico.");
+        if (resultado.length > 0) {
+            localStorage.setItem("docenteEncontrado", JSON.stringify(resultado));
+            window.location.href = "html/docente.html";
         } else {
             alert("No se encontraron coincidencias.");
         }
