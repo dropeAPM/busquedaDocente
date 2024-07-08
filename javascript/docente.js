@@ -14,7 +14,6 @@ window.onload = function() {
                         <p class="card-text"><strong>Rut:</strong> ${docente.rut}</p>
                         <p class="card-text"><strong>Informacion:</strong> ${docente.inf}</p>
                         <p class="card-text"><strong>Email:</strong> ${docente.email}</p>
-                        <p class="card-text"><strong>Contraseña:</strong> ${docente.password}</p>
                     </div>
                 `;
                 detalleContainer.appendChild(docenteCard);

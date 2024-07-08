@@ -4,7 +4,7 @@ function buscarDocente() {
 
     if (busqueda === "") {
         localStorage.setItem("docenteEncontrado", JSON.stringify(listaDocentes));
-        window.location.href = "detalle_docente.html";
+        window.location.href = "html/docente.html";
     } else {
         var resultado = listaDocentes.filter(function(docente) {
             return docente.rut.toLowerCase().includes(busqueda) || 
