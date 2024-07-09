@@ -1,6 +1,23 @@
 function irIndex(){
     window.location.href = "../index.html";
 }
+window.onload = function() {
+    // Verificar si el admin ya está registrado, si no, agregarlo.
+    var listaDocentes = JSON.parse(localStorage.getItem("listaDocentes")) || [];
+    var admin = listaDocentes.find(docente => docente.rut === "admin");
+
+    if (!admin) {
+        listaDocentes.push({
+            rut: "0001",
+            nombre: "Docente1",
+            apellido: "Apellido1",
+            inf: "[horario del docente]",
+            email: "Docente1@correo.com",
+            password: "123"
+        });
+        localStorage.setItem("listaDocentes", JSON.stringify(listaDocentes));
+    }
+};
 
 function login() {
     var rut = document.getElementById("rut").value;
