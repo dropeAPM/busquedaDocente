@@ -4,15 +4,15 @@ function irIndex(){
 window.onload = function() {
     // Verificar si el admin ya está registrado, si no, agregarlo.
     var listaDocentes = JSON.parse(localStorage.getItem("listaDocentes")) || [];
-    var admin = listaDocentes.find(docente => docente.rut === "admin");
+    var docente0 = listaDocentes.find(docente => docente.rut === "0001");
 
-    if (!admin) {
+    if (!docente0) {
         listaDocentes.push({
             rut: "0001",
-            nombre: "Docente1",
-            apellido: "Apellido1",
+            nombre: "Docente0",
+            apellido: "Apellido0",
             inf: "[horario del docente]",
-            email: "Docente1@correo.com",
+            email: "Docente0@correo.com",
             password: "123"
         });
         localStorage.setItem("listaDocentes", JSON.stringify(listaDocentes));
